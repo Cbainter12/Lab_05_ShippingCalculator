@@ -6,11 +6,25 @@ public class Main {
      Scanner in = new Scanner(System.in);
      int productPrice = 0;
      double shippingCost = 0;
-     double finalCost = 0;
+     double totalCost = 0;
 
         System.out.println("Enter the cost of your product: ");
-        productPrice = in.nextLine();
+       if (in.hasNextInt())
+       {
+           productPrice = in.nextInt();
+           in.nextLine();
 
-        if (productPrice <= 100)
+           if (productPrice <= 100)
+           {
+               System.out.println("Your shipping is free!");
+               System.out.println("Your total is " + productPrice);
+           }
+           else
+           {
+               shippingCost = productPrice * .02;
+               totalCost = productPrice + shippingCost;
+               System.out.println("the cost of shipping is " + shippingCost + " and your total cost is " + totalCost);
+           }
+       }
     }
 }
