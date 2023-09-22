@@ -16,7 +16,7 @@ public class Main {
 
            if (productPrice <= 100)
            {
-               System.out.println("Your shipping is free!");
+               System.out.println("Your shipping is FREE!");
                System.out.println("Your total is " + productPrice);
            }
            else
